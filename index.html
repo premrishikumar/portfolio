@@ -1,13 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Prem Rishi</title>
-</head>
-<body>
-  <h1>Prem Rishi</h1>
-  <p>Lead Java Engineer | Payments</p>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prem Rishikumaran | Lead Java Engineer</title>
 
-  <h2>Payment Platform Modernisation</h2>
-  <p>I led the modernisation of a payment system...</p>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: #94a3b8;
+      font-size: 1.2rem;
+    }
+
+    .cta {
+      margin-top: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      background: #2563eb;
+    }
+
+    section {
+      margin: 50px 0;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #1e293b;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .diagram {
+      background: #020617;
+      padding: 20px;
+      border-radius: 10px;
+      font-family: monospace;
+      overflow-x: auto;
+      color: #38bdf8;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Prem Rishi</h1>
+    <p class="subtitle">Lead Java Engineer | Payments | Distributed Systems</p>
+    <p class="subtitle">I design and deliver scalable, real-time payment platforms.</p>
+
+    <div class="cta">
+      <a href="#project">View Project</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <section id="project">
+    <h2>🚀 Payment Platform Modernisation</h2>
+
+    <div class="card">
+      <h3>Overview</h3>
+      <p>
+        Led the modernisation of a legacy payment platform by replacing a third-party intermediary
+        with a direct host-to-host integration with a major UK banking partner.
+      </p>
+
+      <h3>Problem</h3>
+      <ul>
+        <li>No real-time status visibility</li>
+        <li>Dependency on external provider</li>
+        <li>Manual reconciliation</li>
+        <li>Limited failure control</li>
+      </ul>
+
+      <h3>Solution</h3>
+      <ul>
+        <li>Centralised orchestration service</li>
+        <li>Real-time event-driven status updates</li>
+        <li>Secure message exchange</li>
+        <li>Automated reconciliation</li>
+      </ul>
+
+      <h3>Architecture</h3>
+      <div class="diagram">
+Client → API → Orchestration → Bank Integration
+                 ↓
+           Status Handler → UI / Ops
+      </div>
+
+      <h3>Impact</h3>
+      <ul>
+        <li>Removed third-party dependency</li>
+        <li>Enabled real-time tracking</li>
+        <li>Reduced operational overhead</li>
+        <li>Improved reliability</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>🧩 Skills</h2>
+    <div class="tags">
+      <span>Java</span>
+      <span>Spring Boot</span>
+      <span>Microservices</span>
+      <span>Event-Driven</span>
+      <span>Kafka</span>
+      <span>AWS</span>
+      <span>Payments</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📬 Contact</h2>
+    <p>Email: your-email@example.com</p>
+    <p>LinkedIn: <a href="#">Add your link</a></p>
+  </section>
+
+  <footer>
+    © 2026 Prem Rishi
+  </footer>
+
+</div>
+
 </body>
 </html>
