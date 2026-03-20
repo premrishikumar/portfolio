@@ -1,92 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prem Rishikumaran | Lead Java Engineer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prem Rishikumaran | Portfolio</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
       background: #0f172a;
       color: #e2e8f0;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      background: #020617;
+      padding: 30px 20px;
     }
 
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
+    .sidebar h1 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
     }
 
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 600;
-    }
-
-    .subtitle {
-      margin-top: 10px;
+    .sidebar a {
+      display: block;
       color: #94a3b8;
-      font-size: 1.2rem;
-    }
-
-    .cta {
-      margin-top: 20px;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 6px;
       text-decoration: none;
-      color: white;
-      background: #2563eb;
+      margin: 15px 0;
+    }
+
+    .sidebar a:hover {
+      color: #38bdf8;
+    }
+
+    .main {
+      margin-left: 250px;
+      padding: 40px;
+      max-width: 900px;
     }
 
     section {
-      margin: 50px 0;
+      margin-bottom: 80px;
     }
 
     h2 {
-      margin-bottom: 20px;
       font-size: 1.8rem;
+      margin-bottom: 15px;
       border-bottom: 1px solid #334155;
       padding-bottom: 5px;
     }
 
     .card {
       background: #020617;
-      padding: 25px;
+      padding: 20px;
       border-radius: 10px;
-      margin-bottom: 20px;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
+      margin-top: 15px;
     }
 
     ul {
       padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    li {
-      margin-bottom: 8px;
     }
 
     .tags span {
@@ -98,22 +77,26 @@
       font-size: 0.85rem;
     }
 
-    .diagram {
-      background: #020617;
-      padding: 20px;
-      border-radius: 10px;
-      font-family: monospace;
-      overflow-x: auto;
-      color: #38bdf8;
+    .hero {
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      color: #94a3b8;
       margin-top: 10px;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 20px;
-      color: #64748b;
-      font-size: 0.9rem;
+    .diagram {
+      font-family: monospace;
+      background: #020617;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      color: #38bdf8;
     }
 
     a {
@@ -124,86 +107,89 @@
 
 <body>
 
-<div class="container">
-
-  <header>
+  <!-- Sidebar -->
+  <div class="sidebar">
     <h1>Prem Rishikumaran</h1>
-    <p class="subtitle">Lead Java Engineer | Payments | Distributed Systems</p>
-    <p class="subtitle">I design and deliver scalable, real-time payment platforms.</p>
+    <a href="#about">About</a>
+    <a href="#project">Project</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-    <div class="cta">
-      <a href="#project">View Project</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </header>
+  <!-- Main -->
+  <div class="main">
 
-  <section id="project">
-    <h2>🚀 Payment Platform Modernisation</h2>
-
-    <div class="card">
-      <h3>Overview</h3>
+    <!-- About -->
+    <section id="about" class="hero">
+      <h1>Lead Java Engineer</h1>
       <p>
-        Led the modernisation of a legacy payment platform by replacing a third-party intermediary
-        with a direct host-to-host integration with a major UK banking partner.
+        I design and deliver scalable, real-time payment platforms with a focus on reliability and system design.
       </p>
+    </section>
 
-      <h3>Problem</h3>
-      <ul>
-        <li>No real-time status visibility</li>
-        <li>Dependency on external provider</li>
-        <li>Manual reconciliation</li>
-        <li>Limited failure control</li>
-      </ul>
+    <!-- Project -->
+    <section id="project">
+      <h2>🚀 Payment Platform Modernisation</h2>
 
-      <h3>Solution</h3>
-      <ul>
-        <li>Centralised orchestration service</li>
-        <li>Real-time event-driven status updates</li>
-        <li>Secure message exchange</li>
-        <li>Automated reconciliation</li>
-      </ul>
+      <div class="card">
+        <p>
+          Led the transformation of a legacy payment system by replacing a third-party intermediary
+          with a direct host-to-host integration.
+        </p>
 
-      <h3>Architecture</h3>
-      <div class="diagram">
-Client → API → Orchestration → Bank Integration
-                 ↓
-           Status Handler → UI / Ops
+        <h3>Problem</h3>
+        <ul>
+          <li>No real-time status visibility</li>
+          <li>Operational dependency</li>
+          <li>Manual reconciliation</li>
+        </ul>
+
+        <h3>Solution</h3>
+        <ul>
+          <li>Central orchestration service</li>
+          <li>Event-driven updates</li>
+          <li>Secure integration</li>
+        </ul>
+
+        <h3>Architecture</h3>
+        <div class="diagram">
+Client → API → Orchestration → Bank
+             ↓
+       Status Handler → UI
+        </div>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>Real-time tracking</li>
+          <li>Reduced operational overhead</li>
+          <li>Improved reliability</li>
+        </ul>
       </div>
+    </section>
 
-      <h3>Impact</h3>
-      <ul>
-        <li>Removed third-party dependency</li>
-        <li>Enabled real-time tracking</li>
-        <li>Reduced operational overhead</li>
-        <li>Improved reliability</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Skills -->
+    <section id="skills">
+      <h2>🧩 Skills</h2>
+      <div class="tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Microservices</span>
+        <span>Kafka</span>
+        <span>AWS</span>
+        <span>Payments</span>
+      </div>
+    </section>
 
-  <section>
-    <h2>🧩 Skills</h2>
-    <div class="tags">
-      <span>Java</span>
-      <span>Spring Boot</span>
-      <span>Microservices</span>
-      <span>Event-Driven</span>
-      <span>Kafka</span>
-      <span>AWS</span>
-      <span>Payments</span>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:premr@outlook.com">premr@outlook.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/premrishikumaran/" target="_blank">
+        linkedin.com/in/premrishikumaran
+      </a></p>
+    </section>
 
-  <section id="contact">
-    <h2>📬 Contact</h2>
-    <p>Email: premr@outlook.com</p>
-    <p>LinkedIn: <a href="#">https://www.linkedin.com/in/premrishikumaran/</a></p>
-  </section>
-
-  <footer>
-    © 2026 Prem Rishikumaran
-  </footer>
-
-</div>
+  </div>
 
 </body>
 </html>
